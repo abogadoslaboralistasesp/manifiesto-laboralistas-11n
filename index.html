@@ -3,85 +3,153 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manifiesto laboralistas · Huelga General 11 de noviembre</title>
+<meta name="color-scheme" content="light">
+<title>Manifiesto de apoyo de abogados laboralistas a la Huelga General del 11 de noviembre</title>
 <meta name="description" content="Manifiesto de apoyo de abogados laboralistas y graduados sociales a la Huelga General del 11 de noviembre.">
 <style>
-  :root { --bg:#fff; --fg:#1a1a1a; --accent:#b3121f; --muted:#555; --line:#e3e3e3; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#141414; --fg:#eee; --accent:#ff5a66; --muted:#aaa; --line:#333; }
+  :root {
+    --bg:#fbf8f3;
+    --band:#f2ebe0;
+    --ink:#262a36;
+    --muted:#5d6272;
+    --line:#ddd5c8;
+    --brand:#8a2433;
+    --card:#ffffff;
   }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font:18px/1.65 Georgia, "Times New Roman", serif; }
-  header { border-bottom:4px solid var(--accent); padding:2.5rem 1rem 1.5rem; }
-  .wrap { max-width:46rem; margin:0 auto; padding:0 1rem; }
-  header .wrap { padding:0; }
-  h1 { font-size:1.8rem; line-height:1.25; margin:0; text-transform:uppercase; letter-spacing:.02em; }
-  h2 { color:var(--accent); font-size:1.15rem; margin:2rem 0 .5rem; }
-  ul { padding-left:1.2rem; }
-  li { margin-bottom:.7rem; }
-  main { padding-bottom:3rem; }
-  .firmantes { border-top:1px solid var(--line); margin-top:2.5rem; padding-top:1rem; }
-  .firmantes p { color:var(--muted); font-style:italic; }
-  .lista { columns:2 16rem; list-style:none; padding:0; }
-  .lista li { margin:0 0 .3rem; }
-  footer { border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; padding:1rem 0 2rem; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.7 Georgia, "Times New Roman", serif; }
+  .wrap { max-width:72rem; margin:0 auto; padding:0 1.25rem; }
+  .narrow { max-width:44rem; margin:0 auto; }
+  :focus-visible { outline:3px solid var(--brand); outline-offset:2px; }
+
+  header { background:linear-gradient(180deg, #912738 0%, #7a1f2d 100%); color:#fff; padding:4.25rem 0 4rem; border-top:8px solid #e3b95a; border-bottom:1px solid rgba(0,0,0,.15); }
+  h1 { margin:0; max-width:52rem; font-size:clamp(1.7rem, 5.2vw, 3.3rem); line-height:1.18; font-weight:700; letter-spacing:-.005em; text-wrap:balance; }
+  header .rule { width:4.5rem; height:4px; background:#e3b95a; margin-top:1.8rem; }
+
+  section { padding:2.75rem 0; }
+  section.band { background:var(--band); }
+  p { margin:0 0 1.15rem; }
+  ul { margin:0 0 1.15rem; padding-left:1.25rem; }
+  li { margin-bottom:.6rem; }
+
+  .ejes { list-style:none; padding:0; margin:1.5rem 0 0; display:grid; gap:1rem; grid-template-columns:repeat(4, 1fr); }
+  .ejes li { margin:0; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:1.1rem 1.2rem; font-size:.95rem; line-height:1.6; }
+  .ejes strong { display:block; color:var(--brand); font-size:1.02rem; line-height:1.35; margin-bottom:.5rem; }
+  @media (max-width:64rem) { .ejes { grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width:36rem) { .ejes { grid-template-columns:1fr; } }
+
+  h2 { font-size:clamp(1.4rem, 3.2vw, 1.9rem); line-height:1.25; margin:0 0 1rem; color:var(--ink); }
+  .eyebrow { color:var(--brand); font:600 .8rem/1.2 system-ui, sans-serif; letter-spacing:.14em; text-transform:uppercase; margin:0 0 .5rem; }
+  .sub { margin:2.2rem 0 0; }
+  .sub:first-child { margin-top:0; }
+  .dropcap::first-letter { float:left; font-size:3.9rem; line-height:.82; font-weight:700; color:var(--brand); padding:.32rem .55rem 0 0; }
+  .sign-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.5rem 1rem; }
+  .count { color:var(--muted); }
+  .count b { color:var(--brand); font-size:1.4rem; }
+  .signers { list-style:none; padding:0; margin:1rem 0 0; display:grid; gap:.6rem; grid-template-columns:repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+  .signers li { margin:0; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:.6rem .9rem; line-height:1.4; font-size:.95rem; }
+  .signers b { display:block; }
+  .signers span { font-size:.85rem; color:var(--muted); }
+
+  .cta { margin:1.5rem 0 0; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:1.4rem 1.5rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem 1.5rem; }
+  .cta p { margin:0; max-width:36rem; }
+  .cta strong { display:block; font-size:1.15rem; margin-bottom:.2rem; }
+  .cta small { color:var(--muted); font-size:.9rem; }
+  .btn { display:inline-block; background:var(--brand); color:#fff; text-decoration:none; font:600 1rem/1 system-ui, sans-serif; padding:.95rem 1.5rem; border-radius:6px; }
+  .btn:hover { background:#6e1c29; }
+  @media (max-width:36rem) { .btn { display:block; text-align:center; width:100%; } }
+  footer { padding:1.5rem 0 2.5rem; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+  @media (max-width:520px) { body { font-size:17px; } header { padding:2.75rem 0 2.5rem; } section { padding:2rem 0; } }
 </style>
 </head>
 <body>
+
 <header><div class="wrap">
-  <h1>Manifiesto de apoyo de abogados laboralistas y graduados sociales a la Huelga General del 11 de noviembre</h1>
+  <h1>Manifiesto de apoyo de abogados laboralistas y graduados sociales a la Huelga General del 11 de noviembre.</h1>
+  <div class="rule"></div>
 </div></header>
-<main><div class="wrap">
 
-<p>Las abogadas y abogados laboralistas y graduados sociales abajo firmantes, como profesionales del Derecho del Trabajo y de la Seguridad Social que intervenimos a diario en la defensa de los derechos de las personas trabajadoras y sus organizaciones sindicales, manifestamos nuestro explícito y rotundo apoyo a la convocatoria de Huelga General señalada para el próximo día 11 de noviembre, así como a las reivindicaciones expresadas en el manifiesto de la convocatoria.</p>
+<main>
+<section><div class="wrap"><div class="narrow">
+  <p class="eyebrow sub">Manifiesto</p>
+  <p class="dropcap">Las abogadas y abogados laboralistas y graduados sociales abajo firmantes, como profesionales del Derecho del Trabajo y de la Seguridad Social que intervenimos a diario en la defensa de los derechos de las personas trabajadoras y sus organizaciones sindicales, manifestamos nuestro explícito y rotundo apoyo a la convocatoria de Huelga General señalada para el próximo día 11 de noviembre, así como a las reivindicaciones expresadas en el manifiesto de la convocatoria.</p>
+  <p>A través de nuestra práctica profesional en tribunales y mesas de negociación, poseemos un conocimiento directo de la precariedad y de las dificultades estructurales que atraviesa la clase trabajadora de nuestro país. Asimismo, constatamos con honda preocupación la seria amenaza que representan determinados posicionamientos orientados a vaciar de contenido o erosionar conquistas laborales e instituciones fundamentales conquistadas por la clase trabajadora tras décadas de lucha.</p>
+</div></div></section>
 
-<p>A través de nuestra práctica profesional en tribunales y mesas de negociación, poseemos un conocimiento directo de la precariedad y de las dificultades estructurales que atraviesa la clase trabajadora de nuestro país. Asimismo, constatamos con honda preocupación la seria amenaza que representan determinados posicionamientos orientados a vaciar de contenido o erosionar conquistas laborales e instituciones fundamentales conquistadas por la clase trabajadora tras décadas de lucha.</p>
+<section class="band"><div class="wrap">
+  <div class="narrow">
+    <p class="eyebrow sub">Qué apoyamos</p>
+    <h2>Los ejes de la jornada de huelga</h2>
+    <p style="margin:0">Suscribimos plenamente los ejes reivindicativos impulsados para esta jornada de huelga, los cuales resultan imprescindibles para garantizar condiciones de vida y de trabajo dignas:</p>
+  </div>
+  <ul class="ejes">
+    <li><strong>Garantía del poder adquisitivo y salarios dignos.</strong> Recuperación del poder adquisitivo frente al encarecimiento del coste de la vida y los bienes básicos, reforzando la negociación colectiva y asegurando el Salario Mínimo Interprofesional (SMI) como suelo retributivo infranqueable en todos los sectores productivos.</li>
+    <li><strong>Acceso efectivo a una vivienda digna.</strong> Intervención sobre el mercado del alquiler y lucha contra la especulación inmobiliaria que expulsa a las personas trabajadoras y sus familias de los entornos donde prestan sus servicios.</li>
+    <li><strong>Refuerzo de los servicios públicos y el sistema de cuidados.</strong> Incremento de la financiación pública, ampliación de plantillas y consolidación del empleo público, la atención a la dependencia y los sectores sociosanitarios, acabando con la sobrecarga asistencial y la privatización de servicios esenciales.</li>
+    <li><strong>Condiciones laborales de calidad e igualdad.</strong> Equiparación de condiciones laborales, reducción drástica de la temporalidad, conciliación real de la vida personal y familiar, y erradicación de las desigualdades entre colectivos.</li>
+  </ul>
+</div></section>
 
-<p>Suscribimos plenamente los ejes reivindicativos impulsados para esta jornada de huelga, los cuales resultan imprescindibles para garantizar condiciones de vida y de trabajo dignas:</p>
-<ul>
-  <li><strong>Garantía del poder adquisitivo y salarios dignos.</strong> Recuperación del poder adquisitivo frente al encarecimiento del coste de la vida y los bienes básicos, reforzando la negociación colectiva y asegurando el Salario Mínimo Interprofesional (SMI) como suelo retributivo infranqueable en todos los sectores productivos.</li>
-  <li><strong>Acceso efectivo a una vivienda digna.</strong> Intervención sobre el mercado del alquiler y lucha contra la especulación inmobiliaria que expulsa a las personas trabajadoras y sus familias de los entornos donde prestan sus servicios.</li>
-  <li><strong>Refuerzo de los servicios públicos y el sistema de cuidados.</strong> Incremento de la financiación pública, ampliación de plantillas y consolidación del empleo público, la atención a la dependencia y los sectores sociosanitarios, acabando con la sobrecarga asistencial y la privatización de servicios esenciales.</li>
-  <li><strong>Condiciones laborales de calidad e igualdad.</strong> Equiparación de condiciones laborales, reducción drástica de la temporalidad, conciliación real de la vida personal y familiar, y erradicación de las desigualdades entre colectivos.</li>
-</ul>
+<section><div class="wrap"><div class="narrow">
+  <p class="eyebrow sub">Advertencia</p>
+  <h2>Frente a la contrarreforma</h2>
+  <p>Como juristas del trabajo, advertimos públicamente del grave riesgo que suponen las propuestas normativas que pretenden desmantelar el armazón de protección social. Denunciamos firmemente cualquier proyecto de contrarreforma orientado a:</p>
+  <ul>
+    <li>La destrucción o privatización del Sistema Público de Pensiones y el cuestionamiento del principio de solidaridad intergeneracional.</li>
+    <li>La restricción y menoscabo de la protección por Incapacidad Temporal, penalizando al trabajador enfermo o en situación de vulnerabilidad.</li>
+    <li>El ataque sistémico al Salario Mínimo Interprofesional (SMI) y la desregulación o debilitamiento de la negociación colectiva.</li>
+    <li>La amenaza de limitación del propio derecho fundamental a la huelga, garantizado en el artículo 28.2 de la Constitución Española para la defensa de los intereses colectivos.</li>
+  </ul>
+  <p class="eyebrow sub">Avanzar</p>
+  <h2>No basta con contener los retrocesos</h2>
+  <p>Pero, no basta con contener los retrocesos; la realidad del mundo del trabajo exige avanzar decididamente en la causalidad y en la efectividad de la protección frente a la arbitrariedad empresarial.</p>
+  <p>Especial relieve cobra la exigencia de garantizar una indemnización por despido disuasoria y adecuada, conforme a las exigencias derivadas del Artículo 24 del Instrumento de Ratificación de la Carta Social Europea (revisada) y del Convenio n.º 158 de la OIT. Como se ha puesto de manifiesto tras la resolución de las reclamaciones colectivas ante el Comité Europeo de Derechos Sociales (CEDS) -en particular, la Decisión CEDS n.º 207/2022 publicada en julio de 2024- y la ulterior Recomendación del Comité de Ministros del Consejo de Europa de 27 de noviembre de 2024, el sistema español de indemnización tasada por despido improcedente (art. 56.1 del Estatuto de los Trabajadores) resulta insuficientemente disuasorio para el empleador e incapaz de reparar íntegramente el daño real y las circunstancias individuales de las víctimas de un despido ilícito.</p>
+</div></div></section>
 
-<p>Como juristas del trabajo, advertimos públicamente del grave riesgo que suponen las propuestas normativas que pretenden desmantelar el armazón de protección social. Denunciamos firmemente cualquier proyecto de contrarreforma orientado a:</p>
-<ul>
-  <li>La destrucción o privatización del Sistema Público de Pensiones y el cuestionamiento del principio de solidaridad intergeneracional.</li>
-  <li>La restricción y menoscabo de la protección por Incapacidad Temporal, penalizando al trabajador enfermo o en situación de vulnerabilidad.</li>
-  <li>El ataque sistémico al Salario Mínimo Interprofesional (SMI) y la desregulación o debilitamiento de la negociación colectiva.</li>
-  <li>La amenaza de limitación del propio derecho fundamental a la huelga, garantizado en el artículo 28.2 de la Constitución Española para la defensa de los intereses colectivos.</li>
-</ul>
+<section class="band"><div class="wrap"><div class="narrow">
+  <p class="eyebrow sub">Nuestras demandas</p>
+  <h2>Lo que reclamamos</h2>
+  <p>Por todo ello, reclamamos con firmeza:</p>
+  <ul>
+    <li>La reforma del régimen legal del despido improcedente para instaurar indemnizaciones verdaderamente disuasorias y adaptadas al perjuicio real sufrido, superando los topes legales rígidos cuando no alcancen la reparación adecuada exigida por los tratados internacionales.</li>
+    <li>Mecanismos estrictos de control e impugnación frente a la sobreutilización de las causas objetivas de despido, impidiendo la destrucción injustificada de puestos de trabajo.</li>
+    <li>Persecución contundente del fraude en la contratación y del abuso del periodo de prueba como vía de despidos gratuitos y sin causa.</li>
+    <li>Atajar el uso desnaturalizado y abusivo de la contratación fija-discontinua, cuya desregulación práctica está generalizando un injusto modelo de "trabajo a demanda", precarizando las vidas laborales y empobreciendo a la clase trabajadora.</li>
+  </ul>
+  <p style="margin:0"><strong>Por todo ello, los juristas y profesionales firmantes llamamos a la participación en la jornada de huelga general del 11 de noviembre, convencidos de que la defensa colectiva del empleo, los salarios y los servicios públicos es la máxima garantía de un futuro con derechos y justicia social.</strong></p>
+</div></div></section>
 
-<p>Pero, no basta con contener los retrocesos; la realidad del mundo del trabajo exige avanzar decididamente en la causalidad y en la efectividad de la protección frente a la arbitrariedad empresarial.</p>
+<section><div class="wrap">
+  <div class="sign-head">
+    <div><p class="eyebrow">Adhesiones</p><h2 style="margin:0">LISTA DE FIRMANTES</h2></div>
+    <div class="count"><b id="count">–</b> firmantes</div>
+  </div>
+  <div class="cta">
+    <p><strong>¿Eres abogado/a laboralista o graduado/a social?</strong>
+    Escríbenos para adherirte al manifiesto y que añadamos tu nombre a la lista.<br>
+    <small>Indica tu nombre completo, tu número de colegiación y el colegio al que perteneces.</small></p>
+    <a class="btn" href="mailto:abogadoslaboralistas@proton.me?subject=Adhesi%C3%B3n%20al%20manifiesto&body=Nombre%20y%20apellidos%3A%0AN%C2%BA%20de%20colegiaci%C3%B3n%3A%0AColegio%3A%0A%0AQuiero%20adherirme%20al%20manifiesto%20de%20apoyo%20a%20la%20Huelga%20General%20del%2011%20de%20noviembre%20y%20autorizo%20que%20mi%20nombre%20aparezca%20en%20la%20lista%20de%20firmantes.">Adherirme al manifiesto</a>
+  </div>
+  <ul id="lista" class="signers"></ul>
+</div></section>
+</main>
 
-<p>Especial relieve cobra la exigencia de garantizar una indemnización por despido disuasoria y adecuada, conforme a las exigencias derivadas del Artículo 24 del Instrumento de Ratificación de la Carta Social Europea (revisada) y del Convenio n.º 158 de la OIT. Como se ha puesto de manifiesto tras la resolución de las reclamaciones colectivas ante el Comité Europeo de Derechos Sociales (CEDS) -en particular, la Decisión CEDS n.º 207/2022 publicada en julio de 2024- y la ulterior Recomendación del Comité de Ministros del Consejo de Europa de 27 de noviembre de 2024, el sistema español de indemnización tasada por despido improcedente (art. 56.1 del Estatuto de los Trabajadores) resulta insuficientemente disuasorio para el empleador e incapaz de reparar íntegramente el daño real y las circunstancias individuales de las víctimas de un despido ilícito.</p>
+<footer><div class="wrap">Manifiesto de abogados laboralistas y graduados sociales · Huelga General del 11 de noviembre</div></footer>
 
-<h2>Por todo ello, reclamamos con firmeza:</h2>
-<ul>
-  <li>La reforma del régimen legal del despido improcedente para instaurar indemnizaciones verdaderamente disuasorias y adaptadas al perjuicio real sufrido, superando los topes legales rígidos cuando no alcancen la reparación adecuada exigida por los tratados internacionales.</li>
-  <li>Mecanismos estrictos de control e impugnación frente a la sobreutilización de las causas objetivas de despido, impidiendo la destrucción injustificada de puestos de trabajo.</li>
-  <li>Persecución contundente del fraude en la contratación y del abuso del periodo de prueba como vía de despidos gratuitos y sin causa.</li>
-  <li>Atajar el uso desnaturalizado y abusivo de la contratación fija-discontinua, cuya desregulación práctica está generalizando un injusto modelo de "trabajo a demanda", precarizando las vidas laborales y empobreciendo a la clase trabajadora.</li>
-</ul>
-
-<p>Por todo ello, los juristas y profesionales firmantes llamamos a la participación en la jornada de huelga general del 11 de noviembre, convencidos de que la defensa colectiva del empleo, los salarios y los servicios públicos es la máxima garantía de un futuro con derechos y justicia social.</p>
-
-<section class="firmantes">
-  <h2>Lista de firmantes</h2>
-  <p id="count">Cargando…</p>
-  <ul id="lista" class="lista"></ul>
-</section>
-
-</div></main>
-<footer><div class="wrap">Manifiesto de abogados laboralistas y graduados sociales · Huelga General 11 de noviembre</div></footer>
 <script>
-fetch('firmantes.txt').then(r=>r.ok?r.text():'').then(t=>{
-  const names=t.split('\n').map(x=>x.trim()).filter(x=>x&&!x.startsWith('#'));
-  document.getElementById('count').textContent=names.length?names.length+' firmantes':'Próximamente.';
-  const ul=document.getElementById('lista');
-  names.forEach(n=>{const li=document.createElement('li');li.textContent=n;ul.appendChild(li);});
-}).catch(()=>{document.getElementById('count').textContent='Próximamente.';});
+(function(){
+  var ul=document.getElementById('lista'), cnt=document.getElementById('count');
+  fetch('firmantes.txt').then(function(r){return r.ok?r.text():'';}).then(function(t){
+    var names=t.split('\n').map(function(x){return x.trim();}).filter(function(x){return x&&x[0]!=='#';});
+    cnt.textContent=names.length;
+    names.forEach(function(n){
+      var m=n.match(/^(.*?)\.\s+(Colegiad[oa].*)$/), li=document.createElement('li'), b=document.createElement('b');
+      b.textContent=m?m[1]:n; li.appendChild(b);
+      if(m){var s=document.createElement('span'); s.textContent=m[2].replace(/\.$/,''); li.appendChild(s);}
+      ul.appendChild(li);
+    });
+  }).catch(function(){cnt.textContent='0';});
+})();
 </script>
 </body>
 </html>
