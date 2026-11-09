@@ -22,6 +22,8 @@
   main { padding-bottom:3rem; }
   .firmantes { border-top:1px solid var(--line); margin-top:2.5rem; padding-top:1rem; }
   .firmantes p { color:var(--muted); font-style:italic; }
+  .lista { columns:2 16rem; list-style:none; padding:0; }
+  .lista li { margin:0 0 .3rem; }
   footer { border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; padding:1rem 0 2rem; }
 </style>
 </head>
@@ -67,10 +69,19 @@
 
 <section class="firmantes">
   <h2>Lista de firmantes</h2>
-  <p>Próximamente.</p>
+  <p id="count">Cargando…</p>
+  <ul id="lista" class="lista"></ul>
 </section>
 
 </div></main>
 <footer><div class="wrap">Manifiesto de abogados laboralistas y graduados sociales · Huelga General 11 de noviembre</div></footer>
+<script>
+fetch('firmantes.txt').then(r=>r.ok?r.text():'').then(t=>{
+  const names=t.split('\n').map(x=>x.trim()).filter(x=>x&&!x.startsWith('#'));
+  document.getElementById('count').textContent=names.length?names.length+' firmantes':'Próximamente.';
+  const ul=document.getElementById('lista');
+  names.forEach(n=>{const li=document.createElement('li');li.textContent=n;ul.appendChild(li);});
+}).catch(()=>{document.getElementById('count').textContent='Próximamente.';});
+</script>
 </body>
 </html>
